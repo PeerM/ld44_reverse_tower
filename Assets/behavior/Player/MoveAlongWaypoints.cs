@@ -12,6 +12,7 @@ namespace behavior.Player
         public Transform target;
         public float speed = 1;
         public float close_enough = 0.5f;
+        private Rigidbody2D body;
 
         // Start is called before the first frame update
         void Start()
@@ -20,6 +21,7 @@ namespace behavior.Player
 
         void Awake()
         {
+            body = GetComponent<Rigidbody2D>();
             foreach (Transform child in trackParent)
             {
                 children.Add(child);
@@ -57,7 +59,9 @@ namespace behavior.Player
                 direction = direction.normalized;
             }
 
-            transform.Translate(direction * speed * Time.deltaTime, Space.World);
+            
+            body.MovePosition( transform.position + direction * speed * Time.deltaTime); //TODO move to nice physics
+//            transform.Translate(direction * speed * Time.deltaTime, Space.World);
             updateTarget();
         }
     }
