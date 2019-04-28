@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - enemy
+  - ProjectileGroup
+  - EnemyGroup
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - MoverPlayer
+  - Enemy
+  - Text
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: map
+    uniqueID: 2786992427
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: bases
+    uniqueID: 805821207
+    locked: 0
+  - name: towers
+    uniqueID: 3769610037
+    locked: 0
+  - name: units
+    uniqueID: 1474841849
+    locked: 0

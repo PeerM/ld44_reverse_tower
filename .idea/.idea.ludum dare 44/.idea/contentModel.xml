@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Peer\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_ludum dare 44.417529667.00" t="ExcludeRecursive" />
+    <e p="D:\projekts\unity\ludum dare 44" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Activation.cs" t="Include" />
+        <e p="behavior" t="Include">
+          <e p="Combat" t="Include">
+            <e p="Damagable.cs" t="Include" />
+            <e p="DamageOnContact.cs" t="Include" />
+            <e p="HasTarget.cs" t="Include" />
+            <e p="PointUpTo.cs" t="Include" />
+            <e p="Shoot.cs" t="Include" />
+            <e p="TargetClosest.cs" t="Include" />
+            <e p="TargetClosestContinous.cs" t="Include" />
+          </e>
+          <e p="Destroyer.cs" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="BaseEnemy.cs" t="Include" />
+            <e p="CloseCombat.cs" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="RTSCameraController.cs" t="Include" />
+          </e>
+          <e p="MoveUp.cs" t="Include" />
+          <e p="OnACooldown.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="IntegrityDisplay.cs" t="Include" />
+            <e p="LightningExpand.cs" t="Include" />
+            <e p="Line.cs" t="Include" />
+            <e p="MoveAlongWaypoints.cs" t="Include" />
+            <e p="OnEnterTrigger.cs" t="Include" />
+          </e>
+          <e p="PlayerBaseComponent.cs" t="Include" />
+          <e p="Tower.cs" t="Include" />
+        </e>
+        <e p="BuyButtonManager.cs" t="Include" />
+        <e p="BuyTowerUI.cs" t="Include" />
+        <e p="DoesHealing.cs" t="Include" />
+        <e p="IntegrityManager.cs" t="Include" />
+        <e p="PointToWaypoint.cs" t="Include" />
+        <e p="SceneLoader.cs" t="Include" />
+        <e p="TowerUI.cs" t="Include" />
+        <e p="UpgradHandler.cs" t="Include" />
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="ludum dare 44.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
