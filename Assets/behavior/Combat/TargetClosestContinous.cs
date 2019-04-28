@@ -23,7 +23,7 @@ namespace behavior.Combat
                 var target = findClosestEnemy();
                 if (target != null)
                 {
-                    targeter.target = target.transform;
+                    targeter.retarget(target.transform);
                 }
                 else
                 {

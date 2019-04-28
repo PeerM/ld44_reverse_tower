@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using behavior;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,9 @@ public class IntegrityManager : MonoBehaviour
     public int donateAmount = 15;
 
     public int buyAmount = 70;
+    public int buyTowerAmount = 200;
+    public BuyTowerUI[] buyTowerButtons;
+    public bool CanAfforUpgrade => integrity >= buyAmount;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,11 @@ public class IntegrityManager : MonoBehaviour
     void Update()
     {
         displayText.text = $"{integrity}";
+
+        foreach (var button in buyTowerButtons)
+        {
+            button.canAfford = integrity >= buyTowerAmount;
+        }
     }
 
     public void Donate()
@@ -38,11 +47,22 @@ public class IntegrityManager : MonoBehaviour
 
     public void buyUpgrade(PlayerBaseComponent subject)
     {
+        if (CanAfforUpgrade)
+        {
+            integrity -= buyAmount;
+            subject.upgradHandler.Upgrade();
+        }
+    }
+
+    public void buyTower(GameObject tower)
+    {
         if (integrity >= buyAmount)
         {
             integrity -= buyAmount;
-            subject.upgradHandler.Upgrade();        
+            tower.SetActive(true);
+//            usedButton.enabled = false;
+            
+//            buyTowerButtons = buyTowerButtons.Where(val => val != usedButton).ToArray();
         }
-
     }
 }

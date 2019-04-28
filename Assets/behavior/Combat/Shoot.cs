@@ -1,4 +1,5 @@
-﻿using behavior.Combat;
+﻿using System;
+using behavior.Combat;
 using UnityEngine;
 
 namespace behavior
@@ -6,13 +7,26 @@ namespace behavior
     public class Shoot : MonoBehaviour
     {
         public Transform projectileParent;
+        public string parentTag;
         public GameObject prefab;
 
         // Start is called before the first frame update
         void Start()
         {
-            if (projectileParent == null)
+            if (string.IsNullOrEmpty(parentTag))
                 projectileParent = transform;
+            else
+            {
+                var go = GameObject.FindGameObjectWithTag(parentTag);
+                if (go == null)
+                {
+                    Debug.Log(String.Format("Shoot {0} did not find anything with tag {1}", gameObject.name, parentTag));
+                    projectileParent = transform;
+                    return;
+                }
+
+                projectileParent = go.transform;
+            }
         }
 
         // Update is called once per frame
@@ -23,7 +37,7 @@ namespace behavior
             var child_targeting = the_new_bullet.GetComponent<HasTarget>();
             if (my_targeting != null && !my_targeting.Neutral && child_targeting != null)
             {
-                child_targeting.target = my_targeting.target;
+                child_targeting.retarget(my_targeting.target);
             }
         }
     }

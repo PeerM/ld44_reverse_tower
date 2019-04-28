@@ -21,7 +21,7 @@ namespace behavior.Combat
             var target = potential_targets
                 .OrderByDescending(p => (p.transform.position - this.transform.position).magnitude)
                 .First();
-            GetComponent<HasTarget>().target = target.transform;
+            GetComponent<HasTarget>().retarget(target.transform);
         }
     }
 }
