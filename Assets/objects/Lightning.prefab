@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1057571921807160107}
   - component: {fileID: 4860106213745123407}
   - component: {fileID: 4076617972943833483}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,6 +48,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  targetingStateChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: behavior.Combat.TargetingStateEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1057571921807160107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +128,7 @@ GameObject:
   - component: {fileID: 5501676722646924098}
   - component: {fileID: 6344507661352020734}
   - component: {fileID: 8699922191716861309}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: lightning_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

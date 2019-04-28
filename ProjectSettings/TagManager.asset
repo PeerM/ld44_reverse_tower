@@ -7,6 +7,7 @@ TagManager:
   - enemy
   - ProjectileGroup
   - EnemyGroup
+  - target
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - MoverPlayer
   - Enemy
   - Text
-  - 
-  - 
+  - PlayerProjectiles
+  - Waypoints
   - 
   - 
   - 
